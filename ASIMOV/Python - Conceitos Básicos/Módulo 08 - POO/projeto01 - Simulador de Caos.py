@@ -1,3 +1,5 @@
+import random
+
 class Academia:
     def __init__(self):
         self.halteres = [i for i in range(10,36) if i % 2 == 0]
@@ -10,6 +12,9 @@ class Academia:
     def listar_alteres(self):
         return [i for i in self.porta_halteres.values() if i != 0]
 
+    def listar_espacos(self):
+        return [i for i, j in self.porta_halteres.items() if j == 0]
+    
     def pegar_alteres(self, peso):
         pos_hal = list(self.porta_halteres.values()).index(peso)
         key_halt = list(self.porta_halteres.keys())[pos_hal]
@@ -24,6 +29,48 @@ class Academia:
         num_caos = [i for i, j in self.porta_halteres.items() if i != j]
 
         return len(num_caos) / len(self.porta_halteres)
+
+class Usuario:
+    def __init__(self, tipo, academia):
+        self.tipo = tipo # 1 - Normal | 2 - Bagunceiro
+        self.academia = academia
+        self.peso = 0
+
+    def iniciar_treino(self):
+        lista_pesos = self.academia.listar_alteres()
+        self.peso = random.choice(lista_pesos)
+        self.academia.pegar_alteres(self.peso)
     
+    def finalizar_treino(self):
+        espacos = self.academia.listar_espacos()
+
+        if self.tipo == 1:
+            if self.peso in espacos:
+                self.academia.devolver_halter(self.peso, self.peso)
+            else:
+                pos = random.choice(espacos)
+                self.academia.devolver_halter(pos, self.peso)
+        if self.tipo == 2:
+            pos = random.choice(espacos)
+            self.academia.devolver_halter(pos, self.peso)
+        self.peso = 0
+
 acad = Academia()   
-print(acad.pegar_alteres(12))
+
+usuarios = [Usuario(1, acad) for i in range(10)]
+usuarios += [Usuario(2, acad) for i in range(1)]
+random.shuffle(usuarios)
+list_chaos = []
+for i in range(10):
+    random.shuffle(usuarios)
+    for i in range(10):
+        for user in usuarios:
+            user.iniciar_treino()
+        for user in usuarios:
+            user.finalizar_treino()
+    list_chaos += [acad.calcular_caos()]
+print(acad.listar_alteres())
+print(acad.calcular_caos())
+
+import seaborn as sns
+sns.displot(list_chaos)
