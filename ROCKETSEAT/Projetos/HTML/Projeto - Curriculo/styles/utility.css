@@ -1,0 +1,49 @@
+.title-lg{
+    font: 800 56px/120% var(--font-family);
+} 
+
+.title-md{
+    font: 800 24px/120% var(--font-family);
+} 
+.title-sm{
+    font: 800 16px/120% var(--font-family);
+} 
+
+.subtitle{
+    font: 400 20px/120% var(--font-family-subtitle);
+}
+
+.text-md{
+    font: 400 16px/140% var(--font-family-text);
+}
+
+.text-sm{
+    font: 400 14px/140% var(--font-family-text);
+}
+
+.red {
+    color: #E3646E;
+}
+.purle{
+    color: #BB72E9;
+} 
+
+.blue {
+    color: #3996DB;
+} 
+
+.green {
+    color: #82BC4F;
+} 
+
+.yellow {
+    color: #EABD5F;
+}
+
+.flex {
+    display: flex;
+}
+
+.flex-column {
+    flex-direction: column;
+}

@@ -1,0 +1,62 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    font-family: 'Alice', serif;
+    line-height: 150%;
+    color: #573A37;
+}
+
+body {
+    background-color: rgb(139, 69, 19);
+}
+
+
+#rectangles {
+    display: flex;
+    margin: 24px;
+    gap: 25px;
+    justify-content: center;
+}
+.rectangle-1 img, .rectangle-2 img, .rectangle-3 img{
+    width: 300px;
+    height: 250px;
+    border-radius: 16px;
+    border: solid 0.5px rgb(199, 199, 199);
+}
+
+#page {
+    margin: 48px auto;
+    box-sizing: border-box;
+    width: 850px;
+    background-color: rgb(235, 172, 127);
+    border-radius: 10px;
+    padding: 16px;
+}
+
+
+h1 {
+    text-align: center;
+    font-size: 30px;
+    padding-bottom: 14px;
+    text-decoration: underline #573A37 2px;
+}
+
+h2 {
+    padding: 16px;
+}
+
+ul {
+    padding-left: 40px;
+}
+
+p {
+    padding-left: 16px;
+}
+
+footer {
+    color: rgb(235, 172, 127);
+    text-align: center;
+}

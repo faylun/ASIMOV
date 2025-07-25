@@ -1,0 +1,71 @@
+.background {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.card {
+    position: relative;
+    width: 100%;
+    height: 750px;
+    overflow: hidden;
+    
+    figcaption {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+
+        align-items: center;
+        justify-content: center;
+
+        .first-image{
+            margin-inline: auto;
+            border: 2px var(--red) solid;   
+            border-radius: 50%;
+            margin-bottom: 16px;
+            object-fit: cover;
+
+            width: 100px;
+            height: 100px;
+        }
+
+        h2 {
+            margin-top: 56px;
+        }
+
+        p {
+            padding-bottom: 80px;
+            color: var(--gray-300);
+        }
+
+        nav{
+            display: flex;
+            flex-direction: row;
+            gap: 16px;
+
+            div {
+                display: flex;
+                align-items: center;
+                padding: 8px 16px;
+                gap: 8px;
+                border-radius: 30px;
+                background-color: var(--gray-400);
+            }
+        }
+
+        h1 {
+            margin-bottom: 20px;
+            margin-top: 8px;
+        }
+
+
+    }
+}
+
+#vector {
+    width: 32px;
+    height: 32px;
+    margin-top: 94px;
+}
