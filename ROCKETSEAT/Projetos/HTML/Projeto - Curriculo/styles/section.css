@@ -1,0 +1,25 @@
+#services {
+    justify-items: center;
+    justify-content: center;
+    margin: auto;
+    padding-block: 88px 120px;
+
+    .first-div {
+        width: 1040px;
+        justify-items: center;
+        padding-bottom: 56px;
+    }
+
+    nav > div {
+        border: 2px solid var(--gray-500);
+        border-radius: 12px;
+        margin-right: 24px;
+        padding: 20px;
+
+        h3 {
+            padding-top: 20px;
+        }
+    }
+
+    
+}

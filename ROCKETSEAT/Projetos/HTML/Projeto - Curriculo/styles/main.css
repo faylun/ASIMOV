@@ -1,0 +1,30 @@
+#secundary {
+    justify-items: center;
+    justify-content: center;
+    margin: auto;
+    height: 917px;
+
+    .first-div {
+        width: 1040px;
+        justify-items: center;
+        margin-block: 72px 56px;
+    }
+
+    h3 {
+        margin-bottom: 8px;
+    }
+
+    img {
+        width: 306px;
+        height: 156px;
+    }
+
+    div > h3{
+        margin: 4px 4px 8px 4px;
+    }
+
+    p {
+        margin: 0px 4px 4px 4px;
+    }
+    
+}
